@@ -1,0 +1,96 @@
+# Node.js
+node_modules/
+npm-debug.log
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# dotenv environment variable files
+.env
+
+# VSCode directories
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Cache and logs for JetBrains IDEs
+.idea/
+*.iml
+*.iws
+
+# Cache directory for Jest
+__jest__/
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# nyc test coverage
+.nyc_output/
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt/
+
+# Logs
+*.log
+
+# yarn
+yarn-error.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains
+.idea/
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# WebStorm
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# npm
+npm-debug.log
+node_modules/
