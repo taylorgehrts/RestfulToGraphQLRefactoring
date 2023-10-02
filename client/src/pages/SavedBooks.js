@@ -1,9 +1,10 @@
 import React from 'react';
 import { Container, Card, Button, Row, Col } from 'react-bootstrap';
+import Auth from '../utils/auth';
+// import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
 import { useQuery, useMutation } from '@apollo/client';
 import { GET_ME } from '../utils/queries';
 import { REMOVE_BOOK } from '../utils/mutations';
-import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 
 const SavedBooks = () => {
@@ -35,6 +36,8 @@ const SavedBooks = () => {
   // create function that accepts the book's mongo _id value as param and deletes the book from the database
   const handleDeleteBook = async (bookId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
+    console.log('Is logged in:', Auth.loggedIn());
+    console.log('Authentication token:', token);
 
     if (!token) {
       return false;
