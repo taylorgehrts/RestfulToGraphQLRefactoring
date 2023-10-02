@@ -35,9 +35,16 @@ const resolvers = {
     },
     saveBook: async (_, { bookData }, context) => {
       if (context.user) {
+        // Check if description exists, and provide a default value if not
+        const { description = '' } = bookData;
+
+        if (!description) {
+          console.log('Book saved without a description');
+        }
+
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { savedBooks: bookData } },
+          { $addToSet: { savedBooks: { ...bookData, description } } },
           { new: true, runValidators: true }
         );
         return updatedUser;
