@@ -20,6 +20,5 @@
   },
   "dependencies": {
     "@apollo/client": "^3.8.4"
-    
   }
 }
