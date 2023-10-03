@@ -14,7 +14,7 @@
 - [Contact](#contact)
 
 ## Description
-This project involves refactoring a fully functioning Google Books API search engine built with a RESTful API into a GraphQL API built with Apollo Server. The MERN stack is used, consisting of a React front end, MongoDB database, and Node.js/Express.js server and API. The application allows users to search for books, save book searches to the back end, and manage saved books.
+This project involves refactoring a fully functioning Google Books API search engine built with a RESTful API into a GraphQL API built with Apollo Server. The MERN stack is used, consisting of a React front end, MongoDB database, and Node.js/Express.js server and API. The application allows users to search for books, save book searches to the back end, and manage saved books.  
 ![screenshot](./Image/Screenshot%202023-10-02%20at%207.11.48%20PM.png)
 
 ## Technologies Used
@@ -52,7 +52,7 @@ In the components:
 
 
 ## Deployment
-link to deployed site:
+link to deployed site: https://refactorapp-3191b966fc7b.herokuapp.com/
 
 ## Contributions
 - Starter code provided by [Xandromus](https://github.com/coding-boot-camp/solid-broccoli). Credit goes to the original creator for the foundation of this project.
