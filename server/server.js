@@ -1,3 +1,5 @@
+require('dotenv').config(); // Add this line
+
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const { authMiddleware } = require('./utils/auth');
@@ -31,6 +33,7 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
+// Now, use the connection object directly
 db.once('open', () => {
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
