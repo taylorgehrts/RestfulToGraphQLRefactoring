@@ -1,6 +1,5 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
-const path = require('path');
 const { authMiddleware } = require('./utils/auth');
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
@@ -20,21 +19,15 @@ server.start().then(() => {
   server.applyMiddleware({ app });
 });
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-// if we're in production, serve client/build as static assets
+// Serve static assets from client/build (if in production)
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/build/index.html'));
-  });
+  app.use(express.static('client/build'));
 }
 
 // Comment out or remove the following block if you want to use Apollo Server Playground
 if (process.env.NODE_ENV !== 'production') {
   app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/public/index.html'));
+    res.send('Hello! This is your GraphQL API.');
   });
 }
 

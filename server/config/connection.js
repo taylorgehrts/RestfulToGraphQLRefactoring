@@ -8,4 +8,4 @@ if (process.env.NODE_ENV !== 'production') {
 const uri = process.env.MONGODB_URI;
 
 // Connect to MongoDB
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
