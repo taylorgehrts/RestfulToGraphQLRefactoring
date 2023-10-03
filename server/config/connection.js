@@ -10,7 +10,7 @@ console.log("MongoDB URI:", uri);  // Add this line to log the URI
 
 
 // Connect to MongoDB
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true});
 
 
 const db = mongoose.connection;
