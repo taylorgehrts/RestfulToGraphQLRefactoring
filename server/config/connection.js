@@ -9,3 +9,7 @@ const uri = process.env.MONGODB_URI;
 
 // Connect to MongoDB
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
+
+const db = mongoose.connection;
+
+module.exports = db;
